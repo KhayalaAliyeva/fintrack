@@ -12,6 +12,9 @@ spring:
     password: postgres
     driver-class-name: org.postgresql.Driver
 
+  liquibase:
+    change-log: classpath:db/changelog-master.yaml
+
   jpa:
     open-in-view: false
     database: postgresql
@@ -22,6 +25,3 @@ spring:
     properties:
       hibernate:
         format_sql: true
-
-  liquibase:
-      enabled: false

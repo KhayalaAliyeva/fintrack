@@ -39,8 +39,11 @@ dependencies {
 
     // db related
     runtimeOnly 'org.postgresql:postgresql'
+    implementation 'org.liquibase:liquibase-core'
     implementation "org.mapstruct:mapstruct:${mapstructVersion}"
     annotationProcessor "org.mapstruct:mapstruct-processor:${mapstructVersion}"
+    implementation 'org.springframework.boot:spring-boot-starter-liquibase'
+    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
 
     // test
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
